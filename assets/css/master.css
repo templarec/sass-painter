@@ -26,7 +26,7 @@ header {
   justify-content: center;
   background-color: #000000;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
 }
 header ul {
@@ -74,18 +74,21 @@ header nav i {
 }
 
 main {
-  margin-top: 80px;
+  padding-top: 80px;
   background-color: #E8E8E8;
 }
 
+section, main, footer {
+  display: flex;
+  flex-direction: column;
+  /*width: 100vw;*/
+}
+
 #jumbo {
-  width: 100vw;
   height: calc(100vh - 80px);
   background-image: url("./../../assets/img/bg-painter-home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -130,8 +133,6 @@ main {
 }
 
 #possibilities {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -147,6 +148,7 @@ main {
 #possibilities .container .row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 100%;
 }
 #possibilities .container .row .card {
@@ -154,7 +156,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% / 3 - 30px);
+  width: calc(100% / 3);
   margin: 0 15px;
 }
 #possibilities .container .row .card .didascalia {
