@@ -252,3 +252,74 @@ section, main, footer {
 #wall .container .row:nth-child(3) .wall-card:nth-child(1) {
   background-color: #0072BC;
 }
+
+#links {
+  width: 100%;
+  padding-bottom: 30px;
+}
+#links .container {
+  align-items: flex-start;
+}
+#links .container li {
+  margin-bottom: 5px;
+  list-style: none;
+  font-size: 12px;
+}
+#links .container li:first-child {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#links .container li a {
+  text-decoration: none;
+  color: #000;
+}
+#links .container li a:hover {
+  color: red;
+}
+#links .container .liste {
+  padding: 0 30px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#links .container #social {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: 60px;
+  width: 18%;
+}
+#links .container #social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#links .container #social li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+}
+#links .container #social li.instagram {
+  background-color: #E4405F;
+}
+#links .container #social li.facebook {
+  background-color: #3B5998;
+}
+#links .container #social li.twitter {
+  background-color: #1DA1F2;
+}
+#links .container #social li.youtube {
+  background-color: #CD201F;
+}
+#links .container #social li.pinterest {
+  background-color: #BD081C;
+}
+#links .container #social li.rss {
+  background-color: #FF8D00;
+}
