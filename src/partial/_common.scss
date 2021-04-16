@@ -1,5 +1,7 @@
 .container {
   width: 70%;
+  @include column-flex;
+  align-items: center;
 }
 .italic {
   font-style: italic;

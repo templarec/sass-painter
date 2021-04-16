@@ -4,23 +4,23 @@ main {
 }
 section, main, footer {
   @include column-flex;
+  align-items: center;
   /*width: 100vw;*/
 }
 #jumbo {
   height: calc(100vh - 80px);
   background-image: url("./../../assets/img/bg-painter-home.jpg");
   background-size: cover;
+  width: 100%;
   background-repeat: no-repeat;
-
-  align-items: center;
   justify-content: center;
   .container {
-
-    .contenuto {
-      @include column-flex;
+      align-self: center;
       justify-content: center;
-      align-items: flex-start;
-      width: 100%;
+      * {
+        align-self: flex-start;
+      }
+      //width: 100%;
       height: calc(100vh - 80px);
       padding-top: 50px;
 
@@ -46,6 +46,7 @@ section, main, footer {
         border: 2px solid black;
         width: 200px;
         height: 40px;
+        outline: none;
       }
       #learn-more {
         background-color: #000;
@@ -55,16 +56,13 @@ section, main, footer {
         background-color: transparent;
         color: #000;
       }
-    }
+
   }
 
 }
 #possibilities {
-  align-items: center;
   justify-content: center;
   .container {
-    @include column-flex;
-    align-items: center;
     h1 {
       font-size: 30px;
       padding: 30px 0;
@@ -111,4 +109,70 @@ section, main, footer {
     }
 
   }
+}
+#wall {
+  padding: 50px 0;
+  width: 100%;
+ .container {
+
+ .row {
+   padding: 0 15px;
+   width: 100%;
+   @include row-flex;
+   .wall-card{
+     color: #ffffff;
+     @include column-flex;
+     justify-content: center;
+     align-items: center;
+     width: 50%;
+     height: 300px;
+     position: relative;
+     button {
+       width: 150px;
+       background-color: white;
+       color: #000000;
+       height: 40px;
+       text-transform: uppercase;
+     }
+     img {
+       position: absolute;
+       width: 70%;
+     }
+     .content {
+       @include column-flex;
+       justify-content: center;
+       width: 80%;
+       p {
+         font-size: 18px;
+         padding: 20px 0;
+       }
+     }
+   }
+   &:nth-child(1) .wall-card:nth-child(2) {
+     background-image: url("./../../assets/img/wacom-painter.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+   &:nth-child(1) .wall-card:nth-child(1) {
+     background-color: #3C1567;
+   }
+   &:nth-child(2) .wall-card:nth-child(1) {
+     background-image: url("./../../assets/img/painter-master.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+   &:nth-child(2) .wall-card:nth-child(2) {
+     background-color: #3C3C3C;
+   }
+   &:nth-child(3) .wall-card:nth-child(2) {
+     background-image: url("./../../assets/img/business-education.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+   }
+   &:nth-child(3) .wall-card:nth-child(1) {
+     background-color: #0072BC;
+   }
+ }
+
+ }
 }
