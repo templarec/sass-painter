@@ -1,0 +1,57 @@
+main {
+  margin-top: 80px;
+}
+#jumbo {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-image: url("./../../assets/img/bg-painter-home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include column-flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+
+    .contenuto {
+      @include column-flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: calc(100vh - 80px);
+      padding-top: 50px;
+
+      img {
+        width: 300px;
+        margin-bottom: 30px;
+      }
+      h3 {
+        margin-bottom: 30px;
+      }
+      p {
+        color: $color-pink;
+        &.primo {
+          font-weight: bold;
+        }
+      }
+
+      .bottoni {
+        margin-top: 30px;
+      }
+      button {
+        text-transform: uppercase;
+        border: 2px solid black;
+        width: 200px;
+        height: 40px;
+      }
+      #learn-more {
+        background-color: #000;
+        color: #fff;
+      }
+      #dld-trial {
+        background-color: transparent;
+        color: #000;
+      }
+    }
+  }
+
+}

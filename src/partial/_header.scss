@@ -1,0 +1,51 @@
+header {
+  position: fixed;
+  top: 0;
+  @include column-flex;
+  justify-content: center;
+  background-color: $navbar-background;
+  align-items: center;
+  width: 100vw;
+  z-index: 1000;
+  ul {
+    @include row-flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  li {
+    //padding: 0 10px;
+    list-style: none;
+  }
+  .contact-bar {
+    background-color: $navbar-background;
+    color: $contactbar-text-color;
+    @include row-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: $header-container;
+    height: 30px;
+    ul {
+      width: 40%;
+    }
+    i {
+      padding-right: 3px;
+      color: blue;
+    }
+  }
+  nav {
+    background-color: $navbar-background;
+    color: $navbar-text-color;
+    @include row-flex;
+    align-items: center;
+    width: $header-container;
+    height: 50px;
+    img {
+      width: 100px;
+    }
+    i {
+      color: $contactbar-text-color;
+      font-size: 12px;
+    }
+  }
+}
