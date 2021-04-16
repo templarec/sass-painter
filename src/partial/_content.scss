@@ -74,7 +74,7 @@ main {
         background-color: #ffffff;
         @include column-flex;
         align-items: center;
-        width: (calc(100% / 3) - 30px);
+        width: calc(100% / 3 - 30px);
         margin: 0 15px;
         .didascalia {
           @include column-flex;

@@ -154,7 +154,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% / 3)-30px;
+  width: calc(100% / 3 - 30px);
   margin: 0 15px;
 }
 #possibilities .container .row .card .didascalia {
