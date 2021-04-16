@@ -1,5 +1,6 @@
 main {
   margin-top: 80px;
+  background-color: #E8E8E8;
 }
 #jumbo {
   width: 100vw;
@@ -54,4 +55,57 @@ main {
     }
   }
 
+}
+#possibilities {
+  @include column-flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    @include column-flex;
+    align-items: center;
+    h1 {
+      font-size: 30px;
+      padding: 30px 0;
+    }
+    .row  {
+      @include row-flex;
+      width: 100%;
+      .card {
+        background-color: #ffffff;
+        @include column-flex;
+        align-items: center;
+        width: (calc(100% / 3) - 30px);
+        margin: 0 15px;
+        .didascalia {
+          @include column-flex;
+          justify-content: space-around;
+          margin-top: 20px;
+          width: 80%;
+          height: 200px;
+          .learn-more a {
+            text-decoration: none;
+            color: $sec-text-color;
+            &:before {
+              content: "Learn more";
+            }
+            &:hover {
+              color: red;
+            }
+          }
+        }
+        .new:before  {
+          content: "new ";
+          color : $sec-text-color;
+          font-weight: bold;
+          font-style: italic;
+          text-transform: uppercase;
+        }
+        img {
+         width: 100%;
+        }
+
+      }
+    }
+
+  }
 }
