@@ -14,8 +14,7 @@ header {
     justify-content: space-between;
   }
   li {
-    //padding: 0 10px;
-    list-style: none;
+       list-style: none;
   }
   .contact-bar {
     background-color: $navbar-background;
@@ -25,11 +24,13 @@ header {
     align-items: center;
     width: $header-container;
     height: 30px;
+    margin: 3px 0;
+    font-size: 14px;
     ul {
       width: 40%;
     }
     i {
-      padding-right: 3px;
+      padding-right: 7px;
       color: $sec-text-color;
     }
   }
@@ -40,6 +41,7 @@ header {
     align-items: center;
     width: $header-container;
     height: 50px;
+    margin: 3px 0;
     img {
       width: 100px;
     }

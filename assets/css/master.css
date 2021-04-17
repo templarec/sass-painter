@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,12 +51,14 @@ header .contact-bar {
   align-items: center;
   width: 70%;
   height: 30px;
+  margin: 3px 0;
+  font-size: 14px;
 }
 header .contact-bar ul {
   width: 40%;
 }
 header .contact-bar i {
-  padding-right: 3px;
+  padding-right: 7px;
   color: #009CFF;
 }
 header nav {
@@ -67,6 +69,7 @@ header nav {
   align-items: center;
   width: 70%;
   height: 50px;
+  margin: 3px 0;
 }
 header nav img {
   width: 100px;
@@ -77,7 +80,7 @@ header nav i {
 }
 
 main {
-  padding-top: 80px;
+  padding-top: 92px;
   background-color: #E8E8E8;
 }
 
@@ -89,7 +92,7 @@ section, main, footer {
 }
 
 #jumbo {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 92px);
   background-image: url("./../../assets/img/bg-painter-home.jpg");
   background-size: cover;
   width: 100%;
@@ -322,4 +325,41 @@ section, main, footer {
 }
 #links .container #social li.rss {
   background-color: #FF8D00;
+}
+
+footer {
+  background-color: #1E1E1E;
+  width: 100%;
+  padding: 10px 0;
+}
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .container .left {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+}
+footer .container .right {
+  font-size: 10px;
+  width: 40%;
+}
+footer .container .right a {
+  text-decoration: none;
+  color: #998A89;
+}
+footer .container .right ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer .container .right ul li {
+  list-style: none;
+}
+footer .container .right ul li:last-child {
+  color: white;
 }
