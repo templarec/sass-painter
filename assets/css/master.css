@@ -226,11 +226,11 @@ section, main, footer {
   height: 40px;
   outline: none;
 }
-#jumbo .container #learn-more {
+#jumbo .container .learn-more {
   background-color: #000;
   color: #fff;
 }
-#jumbo .container #dld-trial {
+#jumbo .container .dld-trial {
   background-color: transparent;
   color: #000;
 }
