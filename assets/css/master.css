@@ -61,6 +61,16 @@ header .contact-bar i {
   padding-right: 7px;
   color: #009CFF;
 }
+@media all and (max-width: 1730px) {
+  header .contact-bar {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1200px) {
+  header .contact-bar {
+    display: none;
+  }
+}
 header nav {
   background-color: #000000;
   color: #ffffff;
@@ -78,10 +88,46 @@ header nav i {
   color: #cccccc;
   font-size: 12px;
 }
+header nav i.fa-bars {
+  display: none;
+  font-size: 30px;
+  padding: 0 10px;
+}
+@media all and (max-width: 1200px) {
+  header nav li:nth-child(n+3) {
+    display: none;
+  }
+}
+@media all and (max-width: 1200px) {
+  header nav li i.fa-bars {
+    display: inline-block;
+  }
+}
+@media all and (max-width: 1200px) {
+  header nav ul {
+    width: 50%;
+    justify-content: space-between;
+  }
+}
+@media all and (max-width: 1730px) {
+  header nav {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1200px) {
+  header nav {
+    justify-content: flex-start;
+  }
+}
 
 main {
   padding-top: 92px;
   background-color: #E8E8E8;
+}
+@media all and (max-width: 1200px) {
+  main {
+    padding-top: 50px;
+  }
 }
 
 section, main, footer {
@@ -98,6 +144,54 @@ section, main, footer {
   width: 100%;
   background-repeat: no-repeat;
   justify-content: center;
+}
+#jumbo .overlay-mobile {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#jumbo .overlay-mobile h3 {
+  margin-bottom: 30px;
+}
+#jumbo .overlay-mobile p.primo {
+  font-weight: bold;
+}
+#jumbo .overlay-mobile .bottoni {
+  margin-top: 30px;
+}
+#jumbo .overlay-mobile button {
+  text-transform: uppercase;
+  border: 2px solid black;
+  width: 200px;
+  height: 40px;
+  outline: none;
+}
+@media all and (max-width: 768px) {
+  #jumbo .overlay-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#jumbo .overlay-mobile .mobile-container {
+  display: none;
+  width: 80%;
+}
+@media all and (max-width: 768px) {
+  #jumbo .overlay-mobile .mobile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+#jumbo .overlay-mobile img {
+  filter: invert(1);
+  margin-bottom: 20px;
+  width: 300px;
 }
 #jumbo .container {
   align-self: center;
@@ -139,6 +233,18 @@ section, main, footer {
   background-color: transparent;
   color: #000;
 }
+@media all and (max-width: 768px) {
+  #jumbo .container {
+    display: none;
+  }
+}
+@media all and (max-width: 1200px) {
+  #jumbo {
+    height: calc(100vh - 50px);
+    background-position: 60% center;
+    background-size: cover;
+  }
+}
 
 #possibilities {
   justify-content: center;
@@ -158,7 +264,6 @@ section, main, footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% / 3);
   margin: 0 15px;
 }
 #possibilities .container .row .card .didascalia {
@@ -168,6 +273,9 @@ section, main, footer {
   margin-top: 20px;
   width: 80%;
   height: 200px;
+}
+#possibilities .container .row .card .didascalia .title {
+  font-weight: bold;
 }
 #possibilities .container .row .card .didascalia .learn-more a {
   text-decoration: none;
@@ -188,6 +296,25 @@ section, main, footer {
 }
 #possibilities .container .row .card img {
   width: 100%;
+}
+@media all and (max-width: 768px) {
+  #possibilities .container .row .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 768px) {
+  #possibilities .container .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 768px) {
+  #possibilities .container {
+    width: 90%;
+  }
 }
 
 #wall {
@@ -231,6 +358,11 @@ section, main, footer {
   font-size: 18px;
   padding: 20px 0;
 }
+@media all and (max-width: 768px) {
+  #wall .container .row .wall-card {
+    width: 100%;
+  }
+}
 #wall .container .row:nth-child(1) .wall-card:nth-child(2) {
   background-image: url("./../../assets/img/wacom-painter.jpg");
   background-repeat: no-repeat;
@@ -254,6 +386,17 @@ section, main, footer {
 }
 #wall .container .row:nth-child(3) .wall-card:nth-child(1) {
   background-color: #0072BC;
+}
+@media all and (max-width: 768px) {
+  #wall .container .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 768px) {
+  #wall .container {
+    width: 90%;
+  }
 }
 
 #links {
@@ -286,6 +429,13 @@ section, main, footer {
   flex-direction: row;
   justify-content: space-between;
 }
+@media all and (max-width: 768px) {
+  #links .container .liste {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 #links .container #social {
   margin-top: 30px;
   margin-left: auto;
@@ -296,6 +446,13 @@ section, main, footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media all and (max-width: 768px) {
+  #links .container #social ul {
+    padding: 10px 30px;
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 #links .container #social li {
   display: flex;
@@ -325,6 +482,23 @@ section, main, footer {
 }
 #links .container #social li.rss {
   background-color: #FF8D00;
+}
+@media all and (max-width: 768px) {
+  #links .container #social li {
+    margin-right: 3px;
+  }
+}
+@media all and (max-width: 768px) {
+  #links .container #social {
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media all and (max-width: 768px) {
+  #links .container {
+    width: 90%;
+  }
 }
 
 footer {
@@ -362,4 +536,39 @@ footer .container .right ul li {
 }
 footer .container .right ul li:last-child {
   color: white;
+}
+@media all and (max-width: 768px) {
+  footer .container .right ul {
+    flex-wrap: wrap;
+  }
+  footer .container .right li:nth-child(-n+3) {
+    width: calc(100% / 3);
+  }
+  footer .container .right li:last-child {
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  footer .container .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 768px) {
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .container .left {
+    margin-bottom: 10px;
+  }
+  footer .container .right, footer .container .left {
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  footer .container {
+    width: 90%;
+  }
 }

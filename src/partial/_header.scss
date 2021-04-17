@@ -16,7 +16,7 @@ header {
   li {
        list-style: none;
   }
-  .contact-bar {
+   .contact-bar {
     background-color: $navbar-background;
     color: $contactbar-text-color;
     @include row-flex;
@@ -26,12 +26,24 @@ header {
     height: 30px;
     margin: 3px 0;
     font-size: 14px;
+
     ul {
       width: 40%;
     }
     i {
       padding-right: 7px;
       color: $sec-text-color;
+    }
+    @media all and (max-width: $breakpoint-lg){
+      & {
+        width: 100%;
+      }
+    }
+    @media all and (max-width: $breakpoint-md){
+      & {
+      display: none;
+    }
+
     }
   }
   nav {
@@ -48,6 +60,48 @@ header {
     i {
       color: $contactbar-text-color;
       font-size: 12px;
+      &.fa-bars{
+        display: none;
+        font-size: 30px;
+        padding: 0 10px;
+      }
     }
+    li {
+      @media all and (max-width: $breakpoint-md){
+        &:nth-child(n+3) {
+          display: none;
+        }
+        //&:first-child {
+        //  margin-right: auto;
+        //}
+      }
+      i {
+        @media all and (max-width: $breakpoint-md){
+          &.fa-bars{
+            display: inline-block;
+          }
+        }
+      }
+    }
+    ul {
+      @media all and (max-width: $breakpoint-md){
+        &{
+          width: 50%;
+          justify-content: space-between;
+        }
+
+      }
+    }
+    @media all and (max-width: $breakpoint-lg){
+      & {
+        width: 100%;
+      }
+    }
+    @media all and (max-width: $breakpoint-md){
+      & {
+        justify-content: flex-start;
+      }
+    }
+
   }
 }

@@ -1,6 +1,11 @@
 main {
   padding-top: 92px;
   background-color: #E8E8E8;
+  @media all and (max-width: $breakpoint-md) {
+    & {
+    padding-top: 50px;
+  }
+  }
 }
 section, main, footer {
   @include column-flex;
@@ -14,6 +19,54 @@ section, main, footer {
   width: 100%;
   background-repeat: no-repeat;
   justify-content: center;
+  .overlay-mobile {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0,0,0,.7);
+    h3 {
+      margin-bottom: 30px;
+    }
+    p {
+      &.primo {
+        font-weight: bold;
+      }
+    }
+
+    .bottoni {
+      margin-top: 30px;
+    }
+    button {
+      text-transform: uppercase;
+      border: 2px solid black;
+      width: 200px;
+      height: 40px;
+      outline: none;
+    }
+    @media all and (max-width: $breakpoint-sm) {
+      @include column-flex;
+    }
+    .mobile-container {
+      display: none;
+      width: 80%;
+      @media all and (max-width: $breakpoint-sm) {
+        & {
+          @include column-flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    img {
+      filter: invert(1);
+      margin-bottom: 20px;
+      width: 300px;
+    }
+
+  }
   .container {
       align-self: center;
       justify-content: center;
@@ -56,9 +109,19 @@ section, main, footer {
         background-color: transparent;
         color: #000;
       }
-
+    @media all and (max-width: $breakpoint-sm) {
+      & {
+        display: none;
+      }
+    }
   }
-
+ @media all and (max-width: $breakpoint-md) {
+   & {
+     height: calc(100vh - 50px);
+     background-position: 60% center;
+     background-size: cover;
+   }
+ }
 }
 #possibilities {
   justify-content: center;
@@ -75,7 +138,7 @@ section, main, footer {
         background-color: #ffffff;
         @include column-flex;
         align-items: center;
-        width: calc(100% / 3);
+        //width: calc(100% / 3);
         margin: 0 15px;
         .didascalia {
           @include column-flex;
@@ -83,6 +146,9 @@ section, main, footer {
           margin-top: 20px;
           width: 80%;
           height: 200px;
+          .title {
+            font-weight: bold;
+          }
           .learn-more a {
             text-decoration: none;
             color: $sec-text-color;
@@ -104,10 +170,26 @@ section, main, footer {
         img {
          width: 100%;
         }
+        @media all and (max-width: $breakpoint-sm) {
+          & {
+            width: 100%;
+            @include column-flex;
+            margin-bottom: 15px;
+          }
+        }
 
       }
+      @media all and (max-width: $breakpoint-sm) {
+        & {
+          @include column-flex;
+        }
+      }
     }
-
+    @media all and (max-width: $breakpoint-sm){
+      & {
+        width: 90%;
+      }
+    }
   }
 }
 #wall {
@@ -147,6 +229,11 @@ section, main, footer {
          padding: 20px 0;
        }
      }
+     @media all and (max-width: $breakpoint-sm) {
+       & {
+         width: 100%;
+       }
+     }
    }
    &:nth-child(1) .wall-card:nth-child(2) {
      background-image: url("./../../assets/img/wacom-painter.jpg");
@@ -172,8 +259,17 @@ section, main, footer {
    &:nth-child(3) .wall-card:nth-child(1) {
      background-color: #0072BC;
    }
+   @media all and (max-width: $breakpoint-sm) {
+     & {
+       @include column-flex;
+     }
+   }
  }
-
+ @media all and (max-width: $breakpoint-sm) {
+   & {
+     width: 90%;
+   }
+ }
  }
 }
 #links {
@@ -202,7 +298,14 @@ section, main, footer {
       width: 90%;
       @include row-flex;
       justify-content: space-between;
+      @media all and (max-width: $breakpoint-sm) {
+        & {
+          @include column-flex;
+          justify-content: center;
 
+        }
+
+      }
     }
     #social {
       margin-top: 30px;
@@ -213,6 +316,14 @@ section, main, footer {
         @include row-flex;
 
         justify-content: space-between;
+        @media all and (max-width: $breakpoint-sm) {
+          & {
+            padding: 10px 30px;
+            width: 100%;
+            justify-content: flex-start;
+          }
+        }
+
       }
       li {
         @include row-flex;
@@ -241,7 +352,26 @@ section, main, footer {
         &.rss {
           background-color: #FF8D00;
         }
+        @media all and (max-width: $breakpoint-sm) {
+          & {
+            margin-right: 3px;
+          }
+        }
+
       }
+      @media all and (max-width: $breakpoint-sm) {
+        & {
+          justify-content: flex-start;
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+    @media all and (max-width: $breakpoint-sm) {
+      & {
+        width: 90%;
+      }
+
     }
   }
 }

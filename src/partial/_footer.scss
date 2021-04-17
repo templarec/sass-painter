@@ -34,6 +34,43 @@ footer {
           }
         }
       }
+      @media all and (max-width: $breakpoint-sm) {
+        & {
+          ul {
+            flex-wrap: wrap;
+          }
+          li:nth-child(-n+3) {
+            width: calc(100% / 3);
+          }
+          li:last-child {
+
+            width: 100%;
+          }
+        }
+      }
+      @media all and (max-width: $breakpoint-sm) {
+       & {
+         @include row-flex;
+         justify-content: center;
+       }
+      }
+    }
+    @media all and (max-width: $breakpoint-sm) {
+      & {
+        @include column-flex;
+
+      }
+      .left {
+        margin-bottom: 10px;
+      }
+      .right, .left {
+        width: 100%;
+      }
+    }
+    @media all and (max-width: $breakpoint-sm) {
+      & {
+        width: 90%;
+      }
     }
   }
 }
