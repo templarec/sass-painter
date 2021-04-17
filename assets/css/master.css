@@ -242,7 +242,7 @@ section, main, footer {
 @media all and (max-width: 1200px) {
   #jumbo {
     height: calc(100vh - 50px);
-    background-position: 60% center;
+    background-position: 70% center;
     background-size: cover;
   }
 }
@@ -304,6 +304,11 @@ section, main, footer {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 768px) {
+  #possibilities .container .row .card {
+    margin: 0;
   }
 }
 @media all and (max-width: 768px) {
@@ -392,6 +397,11 @@ section, main, footer {
   #wall .container .row {
     display: flex;
     flex-direction: column;
+  }
+}
+@media all and (max-width: 768px) {
+  #wall .container .row {
+    padding: 0;
   }
 }
 @media all and (max-width: 768px) {
